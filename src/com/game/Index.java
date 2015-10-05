@@ -5,6 +5,6 @@ package com.game;
  */
 public class Index  {
     public static void main(String[] args) throws Exception {
-        new MainWindow();
+        MainWindow.getMainWindow();
     }
 }

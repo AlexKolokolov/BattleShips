@@ -15,7 +15,7 @@ public class MainWindow extends JFrame {
     private static MainWindow thisWindow;
 
 
-    public MainWindow() {
+    private MainWindow() {
         super("Battle Ships");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(600, 500);
