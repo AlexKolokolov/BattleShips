@@ -15,7 +15,7 @@ public class Ship {
 
     public Ship(int length, int fieldDimension) {
         LENGTH = length;
-        TYPE = setShipType();
+        TYPE = defineShipType();
         createShip(fieldDimension);
     }
 
@@ -35,9 +35,9 @@ public class Ship {
     }
 
     /*
-    * Метод устанавливает тип корабля в зависимости от его длины.
+    * Метод выдает тип корабля в зависимости от его длины.
     */
-    private String setShipType() {
+    private String defineShipType() {
         switch (LENGTH) {
             case 1: {
                 return "Cruiser";
