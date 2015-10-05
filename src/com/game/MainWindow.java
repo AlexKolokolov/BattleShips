@@ -23,12 +23,11 @@ public class MainWindow extends JFrame {
         setLocationRelativeTo(null);
         setControlPanel();
         setVisible(true);
-        thisWindow = this;
     }
 
     public static MainWindow getMainWindow() {
         if (thisWindow == null) {
-            new MainWindow();
+            thisWindow = new MainWindow();
         }
         return thisWindow;
     }
