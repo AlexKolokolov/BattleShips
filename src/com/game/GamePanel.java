@@ -28,7 +28,7 @@ public class GamePanel extends JPanel {
             gameButtons[i] = new JButton("+");
             gameButtons[i].setActionCommand(String.valueOf(i));
             gameButtons[i].setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
-            gameButtons[i].addActionListener(new GameButtonListener());
+            gameButtons[i].addActionListener(this::buttonPressingReaction);
             buttonPanel.add(gameButtons[i]);
         }
         add(buttonPanel, BorderLayout.CENTER);
@@ -126,10 +126,15 @@ public class GamePanel extends JPanel {
         }
     }
 
-    class GameButtonListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            buttonPressingReaction(e);
-        }
-    }
+
+    /*
+    * Класс был заменен лямбда-выражением.
+    * Оставлен для сравнения.
+    */
+//    class GameButtonListener implements ActionListener {
+//        @Override
+//        public void actionPerformed(ActionEvent e) {
+//            buttonPressingReaction(e);
+//        }
+//    }
 }
